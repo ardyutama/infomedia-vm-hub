@@ -1,7 +1,7 @@
 package route
 
 import (
-	"awp/controllers"
+	"infomedia-vm-hub/controllers"
 
 	"github.com/gofiber/fiber/v2"
 )

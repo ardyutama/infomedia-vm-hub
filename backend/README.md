@@ -1,6 +1,6 @@
-# Digitalisasi Dapot
+# Infomedia VM Hub
 
-
+Internal tool for PT Infomedia Nusantara to manage client VM rentals, contracts, and pricing.
 
 ## Getting started
 

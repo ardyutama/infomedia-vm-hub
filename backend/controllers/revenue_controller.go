@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"awp/database"
-	"awp/models"
+	"infomedia-vm-hub/database"
+	"infomedia-vm-hub/models"
 
 	"github.com/gofiber/fiber/v2"
 )

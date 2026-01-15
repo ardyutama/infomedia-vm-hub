@@ -1,7 +1,7 @@
 package database
 
 import (
-	"awp/helpers"
+	"infomedia-vm-hub/helpers"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

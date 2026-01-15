@@ -4,9 +4,9 @@
 package main
 
 import (
-	"awp/database"
-	"awp/models"
-	"awp/route"
+	"infomedia-vm-hub/database"
+	"infomedia-vm-hub/models"
+	"infomedia-vm-hub/route"
 	"log"
 
 	"github.com/gofiber/fiber/v2"

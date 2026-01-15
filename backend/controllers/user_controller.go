@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"awp/database"
-	"awp/handlers"
-	"awp/models"
-	"awp/utils/password"
+	"infomedia-vm-hub/database"
+	"infomedia-vm-hub/handlers"
+	"infomedia-vm-hub/models"
+	"infomedia-vm-hub/utils/password"
 	"errors"
 	"log"
 	"strings"

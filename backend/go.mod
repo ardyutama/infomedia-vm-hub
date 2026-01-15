@@ -1,4 +1,4 @@
-module awp
+module infomedia-vm-hub
 
 go 1.21.6
 

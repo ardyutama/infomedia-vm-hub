@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"awp/database"
-	"awp/handlers"
-	"awp/models"
+	"infomedia-vm-hub/database"
+	"infomedia-vm-hub/handlers"
+	"infomedia-vm-hub/models"
 
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm/clause"

@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"awp/database"
+	"infomedia-vm-hub/database"
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
