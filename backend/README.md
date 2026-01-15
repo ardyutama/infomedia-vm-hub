@@ -1,10 +1,173 @@
-# Infomedia VM Hub
+# Infomedia VM Hub - Backend API
 
-Internal tool for PT Infomedia Nusantara to manage client VM rentals, contracts, and pricing.
+**RESTful API backend for VM rental management, contract handling, and billing system**
 
-## Getting started
+A Go/Fiber REST API that serves as the core backend for PT Infomedia Nusantara's VM rental and billing operations.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Overview
+
+The backend provides comprehensive APIs for:
+- User authentication and role-based access control
+- VM resource management (types, specifications, status)
+- Client contract lifecycle management
+- Dynamic pricing calculations and billing
+- Service requests and revenue reporting
+- Infrastructure resource configuration (networks, storage, OS)
+
+## Technology Stack
+
+- **Language:** Go 1.21.6
+- **Framework:** Fiber v2 (Express-inspired)
+- **Database:** MySQL
+- **ORM:** GORM
+- **Authentication:** JWT + Bcrypt password hashing
+
+## Project Structure
+
+```
+backend/
+├── main.go                 # Application entry point
+├── go.mod                  # Go module definition
+├── controllers/            # API endpoint handlers
+├── models/                 # Database models & schemas
+├── database/               # Database connection & migration
+├── handlers/               # Request/response handling
+├── route/                  # API route definitions
+└── utils/                  # Utility functions (passwords, etc.)
+```
+
+## Getting Started
+
+### Prerequisites
+- Go 1.21.6+
+- MySQL 5.7+
+- Git
+
+### Installation
+
+1. Clone the repository:
+```bash
+cd backend
+```
+
+2. Install dependencies:
+```bash
+go mod download
+```
+
+3. Create `.env` file with database credentials:
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=infomedia_vm_hub
+```
+
+4. Run the application:
+```bash
+go run main.go
+```
+
+The API will be available at `http://localhost:3000`
+
+## API Endpoints
+
+### Core Resources
+
+- `GET/POST /api/users` - User management
+- `GET/POST /api/roles` - Role management
+- `GET/POST /api/vm-types` - VM type configuration
+- `GET/POST /api/vm-specifications` - VM spec management
+- `GET/POST /api/contracts` - Contract management
+- `GET/POST /api/pricing` - Pricing configuration
+- `GET/POST /api/service-types` - Service type management
+- `GET/POST /api/projects` - Project management
+- `GET /api/revenue` - Revenue reporting
+
+### Supporting Resources
+
+- Networks, Disk Types, Operating Systems
+- Site Locations, Contacts
+- Service Requests, Price History
+- Additional Features, Object Storage
+
+## Database Models
+
+Core data models handled by the API:
+
+| Model | Purpose |
+|-------|---------|
+| User | System users with roles |
+| Role | User permissions and access |
+| Contract | Client rental agreements |
+| VMType | VM configuration templates |
+| VMSpecification | Individual VM instances |
+| Price | Billing rates and calculations |
+| ServiceType | Available services |
+| Project | Client projects |
+| ResourcePerHour | Resource consumption tracking |
+
+## Development
+
+### Code Structure
+
+- **Controllers:** Handle HTTP requests/responses
+- **Models:** Define database schema
+- **Handlers:** Business logic and response formatting
+- **Database:** Connection pooling and migrations
+- **Routes:** API endpoint mapping
+
+### Running Tests
+
+```bash
+go test ./...
+```
+
+### Building for Production
+
+```bash
+go build -o infomedia-vm-hub
+```
+
+## Environment Variables
+
+Required `.env` configuration:
+
+```env
+# Database
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=password
+DB_NAME=infomedia_vm_hub
+
+# API
+PORT=3000
+ENV=development
+```
+
+## API Documentation
+
+Detailed API documentation is available in the API controller files. Each controller provides:
+- Request validation
+- Error handling
+- Response formatting
+- Access control
+
+## Contributing
+
+This is an internal tool for PT Infomedia Nusantara. For development guidelines and contributions, contact the development team.
+
+## License
+
+© PT Infomedia Nusantara - All Rights Reserved
+
+---
+
+**Related Documentation:**
+- [Frontend README](../frontend/README.md)
+- [Project README](../README.md)
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
